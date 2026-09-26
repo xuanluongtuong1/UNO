@@ -1,0 +1,393 @@
+{
+  "communities": {
+    "0": [
+      "package",
+      "package_author",
+      "package_bugs",
+      "package_bugs_url",
+      "package_description",
+      "package_devdependencies",
+      "package_devdependencies_ts_loader",
+      "package_devdependencies_types_express",
+      "package_devdependencies_types_node",
+      "package_devdependencies_typescript",
+      "package_homepage",
+      "package_license",
+      "package_main",
+      "package_name",
+      "package_repository",
+      "package_repository_type",
+      "package_repository_url",
+      "package_scripts",
+      "package_scripts_start",
+      "package_scripts_test",
+      "package_version",
+      "ref_babel_cli",
+      "ref_babel_preset_react_app",
+      "ref_react",
+      "ref_react_dom",
+      "ref_ts_loader",
+      "ref_types_express",
+      "ref_types_node",
+      "ref_typescript"
+    ],
+    "1": [
+      "app_ts_app",
+      "app_ts_app_app",
+      "app_ts_app_gamecontroller",
+      "app_ts_app_io",
+      "app_ts_app_server",
+      "model_db_model_ts_model_db_model",
+      "model_db_model_ts_model_db_model_cardmodel",
+      "model_db_model_ts_model_db_model_cardschema",
+      "model_db_model_ts_model_db_model_chatmodel",
+      "model_db_model_ts_model_db_model_chatschema",
+      "model_db_model_ts_model_db_model_gamemodel",
+      "model_db_model_ts_model_db_model_gameschema",
+      "model_db_model_ts_model_db_model_playermodel",
+      "model_db_model_ts_model_db_model_playerschema",
+      "ref_cors",
+      "ref_dotenv",
+      "ref_express",
+      "ref_http",
+      "ref_mongoose",
+      "ref_path",
+      "ref_socket_io",
+      "source_deck_deck",
+      "source_game_game",
+      "source_game_ts_source_game",
+      "source_rules_rules"
+    ],
+    "2": [
+      "app_adopt",
+      "app_cors_1",
+      "app_db_model_1",
+      "app_dotenv_1",
+      "app_express_1",
+      "app_fulfilled",
+      "app_game_1",
+      "app_http_1",
+      "app_js_app",
+      "app_js_app_app",
+      "app_js_app_gamecontroller",
+      "app_js_app_io",
+      "app_js_app_server",
+      "app_mongoose_1",
+      "app_path_1",
+      "app_rejected",
+      "app_socket_io_1",
+      "app_step"
+    ],
+    "3": [
+      "output_app",
+      "output_app_cards",
+      "output_app_colormap",
+      "output_app_contentbg",
+      "output_app_mainthemeaudio",
+      "output_app_players",
+      "output_deck_component",
+      "output_deck_component_classcallcheck",
+      "output_deck_component_deck",
+      "output_deck_component_defineproperties",
+      "output_deck_component_inherits",
+      "output_deck_component_possibleconstructorreturn",
+      "output_players_compnent",
+      "output_players_compnent_classcallcheck",
+      "output_players_compnent_defineproperties",
+      "output_players_compnent_inherits",
+      "output_players_compnent_players",
+      "output_players_compnent_possibleconstructorreturn"
+    ],
+    "4": [
+      "source_card_card",
+      "source_card_ts_source_card",
+      "source_card_ts_source_card_card",
+      "source_card_ts_source_card_card_constructor",
+      "source_deck_ts_source_deck",
+      "source_deck_ts_source_deck_deck",
+      "source_deck_ts_source_deck_deck_drawcard",
+      "source_deck_ts_source_deck_deck_drawnonspecialcard",
+      "source_player_ts_source_player",
+      "source_player_ts_source_player_player",
+      "source_player_ts_source_player_player_addcard",
+      "source_player_ts_source_player_player_constructor",
+      "source_player_ts_source_player_player_removecard",
+      "source_rules_ts_source_rules",
+      "source_rules_ts_source_rules_rules",
+      "source_rules_ts_source_rules_rules_constructor",
+      "source_rules_ts_source_rules_rules_getrule"
+    ],
+    "5": [
+      "output_board_compnent",
+      "output_board_compnent_board",
+      "output_board_compnent_classcallcheck",
+      "output_board_compnent_defineproperties",
+      "output_board_compnent_inherits",
+      "output_board_compnent_possibleconstructorreturn",
+      "output_card_component",
+      "output_card_component_card",
+      "output_card_component_classcallcheck",
+      "output_card_component_defineproperties",
+      "output_card_component_inherits",
+      "output_card_component_possibleconstructorreturn"
+    ],
+    "6": [
+      "source_app",
+      "source_app_app",
+      "source_app_cors_1",
+      "source_app_express_1",
+      "source_app_game",
+      "source_app_game_1",
+      "source_app_http_1",
+      "source_app_io",
+      "source_app_names",
+      "source_app_path_1",
+      "source_app_server"
+    ],
+    "7": [
+      "model_db_model_js_model_db_model",
+      "model_db_model_js_model_db_model_cardmodel",
+      "model_db_model_js_model_db_model_cardschema",
+      "model_db_model_js_model_db_model_chatmodel",
+      "model_db_model_js_model_db_model_chatschema",
+      "model_db_model_js_model_db_model_gamemodel",
+      "model_db_model_js_model_db_model_gameschema",
+      "model_db_model_js_model_db_model_playermodel",
+      "model_db_model_js_model_db_model_playerschema",
+      "model_db_model_mongoose_1"
+    ],
+    "8": [
+      "package_dependencies",
+      "package_dependencies_babel_cli",
+      "package_dependencies_babel_preset_react_app",
+      "package_dependencies_cors",
+      "package_dependencies_dotenv",
+      "package_dependencies_express",
+      "package_dependencies_mongoose",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "package_dependencies_socket_io"
+    ],
+    "9": [
+      "source_game_game_constructor",
+      "source_game_js_source_game_game",
+      "source_game_js_source_game_game_addcard",
+      "source_game_js_source_game_game_calculatenextturn",
+      "source_game_js_source_game_game_changcurrentcolor",
+      "source_game_js_source_game_game_creategame",
+      "source_game_js_source_game_game_drawcard",
+      "source_game_js_source_game_game_play",
+      "source_game_js_source_game_game_removecard",
+      "source_game_js_source_game_game_resetgame"
+    ],
+    "10": [
+      "source_game_ts_source_game_game",
+      "source_game_ts_source_game_game_addcard",
+      "source_game_ts_source_game_game_calculatenextturn",
+      "source_game_ts_source_game_game_changcurrentcolor",
+      "source_game_ts_source_game_game_creategame",
+      "source_game_ts_source_game_game_drawcard",
+      "source_game_ts_source_game_game_play",
+      "source_game_ts_source_game_game_removecard",
+      "source_game_ts_source_game_game_resetgame",
+      "source_player_player"
+    ],
+    "11": [
+      "source_game_adopt",
+      "source_game_db_model_1",
+      "source_game_deck_1",
+      "source_game_fulfilled",
+      "source_game_js_source_game",
+      "source_game_rejected",
+      "source_game_rules_1",
+      "source_game_step"
+    ],
+    "12": [
+      "tsconfig",
+      "tsconfig_compileroptions",
+      "tsconfig_compileroptions_esmoduleinterop",
+      "tsconfig_compileroptions_forceconsistentcasinginfilenames",
+      "tsconfig_compileroptions_module",
+      "tsconfig_compileroptions_skiplibcheck",
+      "tsconfig_compileroptions_strict",
+      "tsconfig_compileroptions_target"
+    ],
+    "13": [
+      "components_board_compnent",
+      "components_board_compnent_board",
+      "components_board_compnent_board_changecard",
+      "components_board_compnent_board_constructor",
+      "components_board_compnent_board_render"
+    ],
+    "14": [
+      "components_deck_component",
+      "components_deck_component_deck",
+      "components_deck_component_deck_componentdidmount",
+      "components_deck_component_deck_constructor",
+      "components_deck_component_deck_render"
+    ],
+    "15": [
+      "components_players_compnent",
+      "components_players_compnent_players",
+      "components_players_compnent_players_chanenumber",
+      "components_players_compnent_players_constructor",
+      "components_players_compnent_players_render"
+    ],
+    "16": [
+      "source_deck_card_1",
+      "source_deck_js_source_deck",
+      "source_deck_js_source_deck_deck",
+      "source_deck_js_source_deck_deck_drawcard",
+      "source_deck_js_source_deck_deck_drawnonspecialcard"
+    ],
+    "17": [
+      "source_player_js_source_player",
+      "source_player_js_source_player_player",
+      "source_player_js_source_player_player_addcard",
+      "source_player_js_source_player_player_constructor",
+      "source_player_js_source_player_player_removecard"
+    ],
+    "18": [
+      "components_card_component",
+      "components_card_component_card",
+      "components_card_component_card_constructor",
+      "components_card_component_card_render"
+    ],
+    "19": [
+      "source_rules_js_source_rules",
+      "source_rules_js_source_rules_rules",
+      "source_rules_js_source_rules_rules_constructor",
+      "source_rules_js_source_rules_rules_getrule"
+    ],
+    "20": [
+      "source_card_js_source_card",
+      "source_card_js_source_card_card",
+      "source_card_js_source_card_card_constructor"
+    ]
+  },
+  "cohesion": {
+    "0": 0.06896551724137931,
+    "1": 0.09666666666666666,
+    "2": 0.13071895424836602,
+    "3": 0.13725490196078433,
+    "4": 0.19117647058823528,
+    "5": 0.22727272727272727,
+    "6": 0.18181818181818182,
+    "7": 0.2,
+    "8": 0.2,
+    "9": 0.28888888888888886,
+    "10": 0.28888888888888886,
+    "11": 0.35714285714285715,
+    "12": 0.25,
+    "13": 0.4,
+    "14": 0.4,
+    "15": 0.4,
+    "16": 0.4,
+    "17": 0.4,
+    "18": 0.5,
+    "19": 0.5,
+    "20": 0.6666666666666666
+  },
+  "gods": [
+    {
+      "id": "source_game_ts_source_game_game",
+      "label": "Game",
+      "degree": 10
+    },
+    {
+      "id": "source_game_js_source_game_game",
+      "label": "Game",
+      "degree": 10
+    },
+    {
+      "id": "tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 7
+    },
+    {
+      "id": "source_player_ts_source_player_player",
+      "label": "Player",
+      "degree": 5
+    },
+    {
+      "id": "source_rules_ts_source_rules_rules",
+      "label": "Rules",
+      "degree": 5
+    },
+    {
+      "id": "output_card_component_card",
+      "label": "Card()",
+      "degree": 5
+    },
+    {
+      "id": "components_board_compnent_board",
+      "label": "Board",
+      "degree": 4
+    },
+    {
+      "id": "components_deck_component_deck",
+      "label": "Deck",
+      "degree": 4
+    },
+    {
+      "id": "components_players_compnent_players",
+      "label": "Players",
+      "degree": 4
+    },
+    {
+      "id": "source_player_js_source_player_player",
+      "label": "Player",
+      "degree": 4
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Game",
+      "target": "source_deck_deck",
+      "source_files": [
+        "source/game.ts",
+        ""
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "note": "Bridges community 10 → community 1"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `mongoose` connect `app.ts` to `package.json`?",
+      "why": "High betweenness centrality (0.122) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `dependencies` connect `dependencies` to `package.json`?",
+      "why": "High betweenness centrality (0.045) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Game` connect `Game` to `game.js`?",
+      "why": "High betweenness centrality (0.045) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `author`, `url`, `description` to the rest of the system?",
+      "why": "91 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `package.json` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.06896551724137931 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `app.ts` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.09666666666666666 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `app.js` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.13071895424836602 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

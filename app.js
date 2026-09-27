@@ -366,6 +366,35 @@ io.on("connection", (socket) => {
             socket.emit("errorInRequest", { msg: err.message });
         }
     }));
+    socket.on("skipTurn", (data) => __awaiter(void 0, void 0, void 0, function* () {
+        try {
+            if (!data.gameId || data.playerIndex === undefined || !data.playerId)
+                throw new Error("data is not enough");
+            const skipped = yield gameController.skipTurn(data.gameId, data.playerIndex, data.playerId);
+            if (!skipped) {
+                socket.emit("cannotSkip", { gameId: data.gameId, playerId: data.playerId });
+                return;
+            }
+            const game = yield db_model_1.gameModel.findById(data.gameId);
+            const players = game.players.map((player, index) => ({
+                name: player.name,
+                index: index,
+                number: player.cards.length,
+                score: player.score
+            }));
+            for (const player of game.players) {
+                io.to(player.socketId).emit("gameUpdated", Object.assign(Object.assign({ gameId: data.gameId, players: players, currentCard: game.currentCard, currentPlayerTurn: game.currentPlayerTurn, currenColor: game.currentColor }, drawStackState(game)), { cardDrawn: true }));
+                io.to(player.socketId).emit("getCards", {
+                    playerId: player.playerId,
+                    cards: player.cards,
+                    gameId: data.gameId
+                });
+            }
+        }
+        catch (err) {
+            socket.emit("errorInRequest", { msg: err.message });
+        }
+    }));
     socket.on('disconnect', () => __awaiter(void 0, void 0, void 0, function* () {
         try {
             const socketId = socket.id;

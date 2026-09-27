@@ -395,17 +395,17 @@ addEventListener('DOMContentLoaded',()=>{
             });
             document.querySelector(".col").appendChild(drawBtn);
             document.querySelector(".col").appendChild(drawOneBtn);
-            let skipBtn = document.createElement("button");
-            skipBtn.className = "waves-effect waves-light btn";
-            skipBtn.innerText = "skip";
-            skipBtn.addEventListener("click",()=>{
-                socket.emit("skipTurn",{
-                    gameId:gameId,
-                    playerId:playerId,
-                    playerIndex:playerIndex
-                });
-            });
-            document.querySelector(".col").appendChild(skipBtn);
+            // let skipBtn = document.createElement("button");
+            // skipBtn.className = "waves-effect waves-light btn";
+            // skipBtn.innerText = "skip";
+            // skipBtn.addEventListener("click",()=>{
+            //     socket.emit("skipTurn",{
+            //         gameId:gameId,
+            //         playerId:playerId,
+            //         playerIndex:playerIndex
+            //     });
+            // });
+            // document.querySelector(".col").appendChild(skipBtn);
         });
     
     

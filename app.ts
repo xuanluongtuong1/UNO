@@ -406,6 +406,42 @@ io.on("connection", (socket) => {
   }
   });
 
+  socket.on("skipTurn", async (data) => {
+    try {
+      if(!data.gameId || data.playerIndex === undefined || !data.playerId) throw new Error("data is not enough");
+      const skipped = await gameController.skipTurn(data.gameId, data.playerIndex, data.playerId);
+      if (!skipped) {
+        socket.emit("cannotSkip", { gameId: data.gameId, playerId: data.playerId });
+        return;
+      }
+      const game = await gameModel.findById(data.gameId);
+      const players = game.players.map((player, index) => ({
+        name: player.name,
+        index: index,
+        number: player.cards.length,
+        score: player.score
+      }));
+      for (const player of game.players) {
+        io.to(player.socketId).emit("gameUpdated", {
+          gameId: data.gameId,
+          players: players,
+          currentCard: game.currentCard,
+          currentPlayerTurn: game.currentPlayerTurn,
+          currenColor: game.currentColor,
+          ...drawStackState(game),
+          cardDrawn: true
+        });
+        io.to(player.socketId).emit("getCards", {
+          playerId: player.playerId,
+          cards: player.cards,
+          gameId: data.gameId
+        });
+      }
+    } catch (err) {
+      socket.emit("errorInRequest", { msg: err.message });
+    }
+  });
+
   socket.on('disconnect', async () => {
     try{
     const socketId = socket.id;

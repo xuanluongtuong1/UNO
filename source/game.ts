@@ -297,6 +297,20 @@ class Game {
     await game.save();
     return 1;
   }
+  async skipTurn(gameId: mongoose.Types.ObjectId, playerIndex: number, playerId: string) {
+    const game = await gameModel.findById(gameId);
+    if (!game || playerIndex < 0 || playerIndex >= game.players.length) return 0;
+    const player = game.players[playerIndex];
+    if (game.pendingHandSwapPlayerId || game.pendingColorPlayerId || (game.pendingDraw || 0) > 0) return 0;
+    if (game.currentPlayerTurn != playerIndex || player.playerId != playerId) return 0;
+
+    const card = this.drawFromPile(game);
+    if (card) player.cards.push(card);
+    player.drawCard = 0;
+    this.calculateNextTurn(game);
+    await game.save();
+    return 1;
+  }
   async swapHands(gameId: mongoose.Types.ObjectId, playerIndex: number, targetIndex: number, playerId: string) {
     const game = await gameModel.findById(gameId);
     if (!game || !game.advancedMode || !Number.isInteger(playerIndex) || !Number.isInteger(targetIndex)) return 0;

@@ -392,6 +392,17 @@ addEventListener('DOMContentLoaded',()=>{
             });
             document.querySelector(".col").appendChild(drawBtn);
             document.querySelector(".col").appendChild(drawOneBtn);
+            let skipBtn = document.createElement("button");
+            skipBtn.className = "waves-effect waves-light btn";
+            skipBtn.innerText = "skip";
+            skipBtn.addEventListener("click",()=>{
+                socket.emit("skipTurn",{
+                    gameId:gameId,
+                    playerId:playerId,
+                    playerIndex:playerIndex
+                });
+            });
+            document.querySelector(".col").appendChild(skipBtn);
         });
     
     
@@ -401,6 +412,8 @@ addEventListener('DOMContentLoaded',()=>{
             if(drawBtn) drawBtn.innerText = data.pendingDraw > 0 ? `draw penalty (${data.pendingDraw})` : "draw until color";
             let drawOneBtn = document.querySelector(".col button:nth-child(2)");
             if(drawOneBtn) drawOneBtn.disabled = data.pendingDraw > 0;
+            let skipBtn = document.querySelector(".col button:nth-child(3)");
+            if(skipBtn) skipBtn.disabled = data.pendingDraw > 0;
             if(playerIndex == data.currentPlayerTurn && !data.cardDrawn){
                 swal.fire({
                    confirmButtonColor:"#2c3e50",

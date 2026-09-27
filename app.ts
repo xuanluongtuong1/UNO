@@ -126,6 +126,10 @@ io.on("connection", (socket) => {
       if(!game) throw new Error("no game with this id");
       if (game.players[0].playerId != data.playerId) throw new Error("only the host can start the game");
       game.advancedMode = data.advancedMode === true;
+      const requestedWinningScore = Number(data.winningScore);
+      game.winningScore = Number.isFinite(requestedWinningScore) && requestedWinningScore >= 500
+        ? Math.floor(requestedWinningScore)
+        : 500;
       game.pendingHandSwapPlayerId = null;
       game.pendingColorPlayerId = null;
       await game.save();
@@ -151,6 +155,7 @@ io.on("connection", (socket) => {
         currentPlayerTurn: game.currentPlayerTurn,
         currenColor:game.currentColor,
         advancedMode: game.advancedMode,
+        winningScore: game.winningScore,
         ...drawStackState(game)
       });
     }

@@ -32,6 +32,7 @@ const gameSchema = new Schema({
   pendingDraw: { type: Number, default: 0 },
   drawStackType: { type: String, default: null },
   advancedMode: { type: Boolean, default: false },
+  winningScore: { type: Number, default: 500, min: 500 },
   pendingHandSwapPlayerId: { type: String, default: null },
   pendingColorPlayerId: { type: String, default: null },
   drawPile: [cardSchema],

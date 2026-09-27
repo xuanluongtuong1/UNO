@@ -552,7 +552,7 @@ addEventListener('DOMContentLoaded',()=>{
                 title: "Choose a player to swap hands with",
                 input: "select",
                 inputOptions: options,
-                inputPlaceholder: "Select a player",
+                inputPlaceholder: data.players[0].name,
                 confirmButtonColor: "#2c3e50",
                 allowOutsideClick: false
             });

@@ -350,7 +350,7 @@ class Game {
                 return 0;
             if (!this.hasPlayableCard(game, playerIndex))
                 return 0;
-            this.drawToCurrentPlayer(game, playerIndex, 2);
+            this.drawToCurrentPlayer(game, playerIndex, 0);
             player.drawCard = 0;
             this.calculateNextTurn(game);
             yield game.save();

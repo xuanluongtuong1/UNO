@@ -168,6 +168,13 @@ class Game {
             game.currentCard = playedCard;
             draw_stack_1.default.addCard(game, playedCard);
             this.removeCard(game, cardIndex);
+            if (game.players[game.currentPlayerTurn].cards.length == 0) {
+                draw_stack_1.default.clear(game);
+                game.pendingColorPlayerId = null;
+                game.pendingHandSwapPlayerId = null;
+                yield game.save();
+                return 7;
+            }
             if (playedCard.color == "black" && game.players[game.currentPlayerTurn].cards.length > 0) {
                 game.pendingColorPlayerId = playerId;
             }
@@ -177,12 +184,6 @@ class Game {
                 game.pendingHandSwapPlayerId = playerId;
                 yield game.save();
                 return 8;
-            }
-            if (game.players[game.currentPlayerTurn].cards.length == 0) {
-                draw_stack_1.default.clear(game);
-                game.pendingColorPlayerId = null;
-                yield game.save();
-                return 7;
             }
             if (ruleNumber == 1) {
                 game.players[game.currentPlayerTurn].score += 20;
@@ -284,11 +285,9 @@ class Game {
                 this.drawToCurrentPlayer(game, playerIndex, game.pendingDraw);
                 draw_stack_1.default.clear(game);
                 player.drawCard = 0;
-                const canPlayAfterPenalty = this.hasPlayableCard(game, playerIndex);
-                if (!canPlayAfterPenalty)
-                    this.calculateNextTurn(game);
+                this.calculateNextTurn(game);
                 yield game.save();
-                return canPlayAfterPenalty ? 1 : 2;
+                return 2;
             }
             if (this.hasPlayableCard(game, playerIndex))
                 return 0;

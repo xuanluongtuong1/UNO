@@ -9,6 +9,7 @@ let playerName = undefined;
 let playerIndex = undefined;
 let host = undefined;
 let advancedMode = false;
+let winningScore = 500;
 let pendingColorChoice = null;
 let playerId = "";
 let showQueue = false;
@@ -116,6 +117,7 @@ addEventListener('DOMContentLoaded',()=>{
         });
         modalHostClose.click( ()=>{
             advancedMode = document.querySelector("#advancedModeCheckbox").checked;
+            winningScore = Number(document.querySelector("#winningScoreInput").value) || 500;
             showQueue = true;
             modalHost.close();  
             let playersCollection  = document.querySelector("#queue");
@@ -134,7 +136,8 @@ addEventListener('DOMContentLoaded',()=>{
                 socket.emit("startGame",{
                     gameId:gameId,
                     playerId:playerId,
-                    advancedMode:advancedMode
+                    advancedMode:advancedMode,
+                    winningScore:winningScore
                 });
     
             });

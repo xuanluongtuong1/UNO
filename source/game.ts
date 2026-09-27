@@ -47,7 +47,8 @@ class Game {
     return drawn;
   }
   private hasReachedWinningScore(game): boolean {
-    if (game.players[game.currentPlayerTurn].score < 500) return false;
+    const winningScore = Number(game.winningScore) >= 500 ? Number(game.winningScore) : 500;
+    if (game.players[game.currentPlayerTurn].score < winningScore) return false;
     DrawStack.clear(game);
     game.pendingColorPlayerId = null;
     return true;
@@ -303,9 +304,9 @@ class Game {
     const player = game.players[playerIndex];
     if (game.pendingHandSwapPlayerId || game.pendingColorPlayerId || (game.pendingDraw || 0) > 0) return 0;
     if (game.currentPlayerTurn != playerIndex || player.playerId != playerId) return 0;
+    if (!this.hasPlayableCard(game, playerIndex)) return 0;
 
-    const card = this.drawFromPile(game);
-    if (card) player.cards.push(card);
+    this.drawToCurrentPlayer(game, playerIndex, 2);
     player.drawCard = 0;
     this.calculateNextTurn(game);
     await game.save();

@@ -16,7 +16,7 @@ let showQueue = false;
 let rematch = false;
 let mainThemeAudio = new Audio('audio/theme.mp3');
 mainThemeAudio.loop = true;
-mainThemeAudio.volume = .2;
+mainThemeAudio.volume = 0;
 let contentBG = document.querySelector("body");
 let colorMap = {
     "red":"#ff5555",
